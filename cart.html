@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cart</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/.css">
+        <link rel="stylesheet" href="css/footer.css">
+
+        <link rel="icon" type="" sizes="96x96" href="images/Brown Simple Food Store Logo.png">
+
+    </head>
+    <body>
+        <!----header section start-->  
+        <header class="header">
+            <section class="flex">
+
+                <a href="home.html"><img src="images/lg.png" width="120" height="50" alt="Logo"></a>
+
+
+                <nav class="navbar">
+                    <a href="home.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="index.php">Login</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+
+                <div class="icons">
+                    <a href="search.html"><i class="fas fa-search"></i></a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i><span>(0)</span></a>
+                    <a href="profile.php" class="fas fa-user" ></a>
+                    <div id="menu-btn" class="fas fa-bars"></div>
+                </div>
+
+            </section>
+
+        </header>
+        <!----header section end-->
+
+        <div class="heading">
+            <h3>Food Cart</h3>
+
+        </div>
+
+        <section class="products">
+
+            <h1 class="title">My Cart</h1>
+
+
+            <div class="cart-total">
+                <p>Total : <span>Rs.410/-</span></p>
+                <a href="checkout.html" class="btn">Confirm Orders</a>
+            </div>
+        </div>
+
+        <div class="box-container">
+
+            <div class="box">
+                <a href="quick_view.html" class="fas fa-eye"></a>
+                <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+                <img src="images\3.jpg" alt="">
+                <div class="name">Noodles</div>
+                <div class="flex">
+                    <div class="price"><span>Rs</span>200/-</div>
+                    <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if (this.value.length == 5)
+                            return false;">
+                    <button type="submit" class="fas fa-edit"></button>
+                </div>
+                <div class="sub-total">sub total : <span>Rs200/-</span></div>
+            </div>
+
+            <div class="box">
+                <a href="quick_view.html" class="fas fa-eye"></a>
+                <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+                <img src="images\8.jpg" alt="">
+                <div class="name">Sandwiches</div>
+                <div class="flex">
+                    <div class="price"><span>Rs</span>50/-</div>
+                    <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if (this.value.length == 2)
+                            return false;">
+                    <button type="submit" class="fas fa-edit"></button>
+                </div>
+                <div class="sub-total">sub total : <span>Rs50/-</span></div>
+            </div>
+
+            <div class="box">
+                <a href="quick_view.html" class="fas fa-eye"></a>
+                <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+                <img src="images\7.jpg" alt="">
+                <div class="name">Pizza</div>
+                <div class="flex">
+                    <div class="price"><span>Rs</span>1500/-</div>
+                    <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if (this.value.length == 2)
+                            return false;">
+                    <button type="submit" class="fas fa-edit"></button>
+                </div>
+                <div class="sub-total">sub total : <span>Rs1500/-</span></div>
+            </div>
+            <div class="box">
+                <a href="quick_view.html" class="fas fa-eye"></a>
+                <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+                <img src="images\9.jpg" alt="">
+                <div class="name">Hamburgers</div>
+                <div class="flex">
+                    <div class="price"><span>Rs</span>150/-</div>
+                    <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if (this.value.length == 5)
+                            return false;">
+                    <button type="submit" class="fas fa-edit"></button>
+                </div>
+                <div class="sub-total">sub total : <span>Rs150/-</span></div>
+            </div>
+
+            <div class="box">
+                <a href="quick_view.html" class="fas fa-eye"></a>
+                <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+                <img src="images\13.jpg" alt="">
+                <div class="name">Orange Drink</div>
+                <div class="flex">
+                    <div class="price"><span>Rs</span>200/-</div>
+                    <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if (this.value.length == 5)
+                            return false;">
+                    <button type="submit" class="fas fa-edit"></button>
+                </div>
+                <div class="sub-total">sub total : <span>Rs200/-</span></div>
+            </div>
+            <div class="box">
+                <a href="quick_view.html" class="fas fa-eye"></a>
+                <button class="fas fa-times" type="submit" name="delete" onclick="return confirm('delete this item?')"></button>
+                <img src="images\24.jpg" alt="">
+                <div class="name">Brownies</div>
+                <div class="flex">
+                    <div class="price"><span>Rs</span>160/-</div>
+                    <input type="number" name="qty" class="qty" min="1" max="99" value="1" onkeypress="if (this.value.length == 5)
+                            return false;">
+                    <button type="submit" class="fas fa-edit"></button>
+                </div>
+                <div class="sub-total">sub total : <span>Rs160/-</span></div>
+            </div>
+
+        </div>
+
+        <div class="more-btn">
+            <a href="#" class="delete-btn" onclick="return confirm('delete all from cart?');">delete all</a>
+        </div>
+
+    </section>
+
+
+
+    <!---footer section start--->
+    <footer>
+        <div class="footer-back">
+            <div class="footer-wrap">
+                <div class="footer-mar">
+                    <div class="foo-width-1 footer-pad">
+                        <div class="footer-text">
+
+                            <div class="footer-logo">
+                                <a href="home.html">
+                                    <img src="images/lg.png" alt="">
+                                </a>
+                                <h1><u>Opening Hours</u></h1> 
+                                <p class="hours">Monday-Sunday : 8.00am - 22.00pm</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foo-width-2 footer-pad">
+                        <div class="footer-text">
+                            <h1><u>Site Link</u></h1>
+                            <a href="home.html"> Home</a>
+                            <a href="menu.html"> Menu</a>
+                            <a href="index.php"> Login</a>
+                            <a href="aboutus.html"> About Us</a>
+                            <a href="contact.html"> Contact Us</a>
+
+                        </div>
+                    </div>
+                    <div class="foo-width-3 footer-pad">
+                        <div class="footer-text">
+                            <h1><u>Contact Us</u></h1>
+                            <p class="address">10th Floor,<br>
+                                Alimenta,<br>
+                                Kandy,<br>
+                                Sri Lanka.<br>
+                                (+94) 72 1234567
+                            </p>
+                            <div class="media-icon">
+                                <a href="https://www.facebook.com/profile.php?id=61550849227707&mibextid=ZbWKwL">
+                                    <img src="images/facebook.png" alt="Facebook">
+                                </a>
+
+                                <a href="https://chat.whatsapp.com/G4W3lSstxEkH71rXqWxthq">
+                                    <img src="images/whatsapp.png" alt="Whatsapp">
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-border">
+                        <div class="footer-bottom">
+                            <p>Copyright <i class="far fa-copyright"></i> 2023 <b>ALIMENTA.</b> All Rights Reserved.Designed By IIT Group 02. </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

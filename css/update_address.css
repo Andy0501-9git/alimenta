@@ -1,0 +1,61 @@
+section{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+*{
+font-family: 'Rubik',sans-serif;
+box-sizing: border-box;
+outline: none;
+border: none;
+text-decoration: none;
+transition: 0.2s linear;
+
+}
+:root{
+    --yellow: #23a539;
+    --red: #e74c3c;
+    --white: #fff;
+    --black: #222;
+    --light-color: #777;
+    --border: 0.2rem solid var(--black);
+}
+:host, :root {
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+}
+:host, :root {
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+}
+:host, :root {
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+}
+:root {
+    --swiper-navigation-size: 44px;
+}
+:root {
+    --swiper-theme-color: #007aff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: darkgreen;
+    border-radius: 5rem;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::selection {
+    background-color: yellowgreen;
+    color: var(--black);
+}
+

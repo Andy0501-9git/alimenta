@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Update Profile</title>
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+        <!-- custom css file link  -->
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/footer.css">
+
+        <link rel="icon" type="" sizes="96x96" href="images/Brown Simple Food Store Logo.png">
+
+    </head>
+    <body>
+        <!----header section start-->  
+        <header class="header">
+            <section class="flex">
+
+                <a href="home.html"><img src="images/lg.png" width="120" height="50" alt="Logo"></a>
+
+
+                <nav class="navbar">
+                    <a href="home.html">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="index.php">Login</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                </nav>
+
+                <div class="icons">
+                    <a href="search.html"><i class="fas fa-search"></i></a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i><span>(0)</span></a>
+                    <a href="profile.php" class="fas fa-user" ></a>
+                    <div id="menu-btn" class="fas fa-bars"></div>
+                </div>
+
+                <div class="profile">
+                    <p class="name">Please login first!</p>
+                    <div class="flex">
+                        <a href="login.html" class="btn">Login</a>
+                        <a href="register.html" class="btn">Register</a>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </header>
+        <!----header section end-->
+
+
+        <style>
+            .heading{
+                text-align: center;
+                color: #333;
+                margin-bottom: 40px;
+                font-size: 24px;
+
+            }
+
+            .form-container{
+                margin-top: 200px;
+                max-width: 600px;
+                margin: 45px auto;
+                padding: 50px;
+                background-color: #66ffc2;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            }
+
+
+            body {
+                font-family: Arial, sans-serif;
+                /* background-image: url('images/update.jpg');*/
+                margin: 0;
+                padding: 0;
+                /*background-color: #99ff99;*/
+                font-size: 18px;
+
+            }
+
+            form input[type="submit"] {
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                background-color: #006600;
+                color: #fff;
+                cursor: pointer;
+                border: none;
+                padding: 10px 100px;
+                font-size: 18px;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+                margin-left: 20px;
+
+
+            }
+
+            form input,
+            form textarea {
+                display: block;
+                width: 100%;
+                margin: 0 auto 1px;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+                font-size: 14px;
+                margin-left: 20px;
+                margin-bottom: 10px;
+            }
+
+
+        </style>
+
+    </head>
+
+
+<body>
+
+    <section class="form-container">
+        <div class="profile-card">
+
+            <form action="" method="POST">
+                <h2 class="hedding">Update Profile</h2>
+                <table>
+                    <tr>
+                        <td>User Name:</td>
+                        <td><input type="text" required maxlength="20" name="name" placeholder="Enter your name" class="box" oninput="this.value = this.value.replace(/\s/g, '')" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td><input type="email" required maxlength="50" name="email" placeholder="Enter your email" class="box" oninput="this.value = this.value.replace(/\s/g, '')" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Tel No:</td>
+                        <td><input type="text" maxlength="10" onkeypress="if (this.value.length == 10)
+                                    return false;" placeholder="Enter your number" required class="box" name="number" value=""></td>
+
+
+                    </tr>
+                    <tr>
+                        <td>Old Password:</td>
+                        <td><input type="password" maxlength="20" name="old_pass" placeholder="Enter your old password" class="box" oninput="this.value = this.value.replace(/\s/g, '')"></td>
+                    </tr>
+                    <tr>
+                        <td>New Password:</td>
+                        <td><input type="password" maxlength="20" name="new_pass" placeholder="Enter your new password" class="box" oninput="this.value = this.value.replace(/\s/g, '')"></td>
+                    </tr>
+                    <tr>
+                        <td>Confirm Password:</td>
+                        <td><input type="password" maxlength="20" name="confirm_pass" placeholder="Confirm your new password" class="box" oninput="this.value = this.value.replace(/\s/g, '')"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Update Now" class="btn" name="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </section>
+
+    <!---footer section start--->
+    <footer>
+        <div class="footer-back">
+            <div class="footer-wrap">
+                <div class="footer-mar">
+                    <div class="foo-width-1 footer-pad">
+                        <div class="footer-text">
+
+                            <div class="footer-logo">
+                                <a href="home.html">
+                                    <img src="images/lg.png" alt="">
+                                </a>
+                                <h1><u>Opening Hours</u></h1> 
+                                <p class="hours">Monday-Sunday : 8.00am - 22.00pm</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="foo-width-2 footer-pad">
+                        <div class="footer-text">
+                            <h1><u>Site Link</u></h1>
+                            <a href="home.html"> Home</a>
+                            <a href="menu.html"> Menu</a>
+                            <a href="index.php"> Login</a>
+                            <a href="aboutus.html"> About Us</a>
+                            <a href="contact.html"> Contact Us</a>
+
+                        </div>
+                    </div>
+                    <div class="foo-width-3 footer-pad">
+                        <div class="footer-text">
+                            <h1><u>Contact Us</u></h1>
+                            <p class="address">10th Floor,<br>
+                                Alimenta,<br>
+                                Kandy,<br>
+                                Sri Lanka.<br>
+                                (+94) 72 1234567
+                            </p>
+                            <div class="media-icon">
+                                <a href="https://www.facebook.com/profile.php?id=61550849227707&mibextid=ZbWKwL">
+                                    <img src="images/facebook.png" alt="Facebook">
+                                </a>
+
+                                <a href="https://chat.whatsapp.com/G4W3lSstxEkH71rXqWxthq">
+                                    <img src="images/whatsapp.png" alt="Whatsapp">
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-border">
+                        <div class="footer-bottom">
+                            <p>Copyright <i class="far fa-copyright"></i> 2023 <b>ALIMENTA.</b> All Rights Reserved.Designed By IIT Group 02. </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

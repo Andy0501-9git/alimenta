@@ -1,0 +1,838 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+/* Global CSS Variables */
+:root {
+   --darkgreen: #006400;
+   --red: #e74c3c;
+   --white: #fff;
+   --black: #222;
+   --light-color: #777;
+   --border: 0.2rem solid var(--black);
+}
+
+/* Global Reset */
+* {
+   font-family: 'Rubik', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   outline: none;
+   border: none;
+   text-decoration: none;
+   transition: 0.2s linear;
+}
+
+/* Text Selection Styles */
+*::selection {
+   background-color: yellowgreen;
+   color: var(--black);
+}
+
+/* Global HTML Styles */
+html {
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 8rem;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+   height: .5rem;
+   width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+   background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: darkgreen;
+   border-radius: 5rem;
+}
+
+/* Section Styling */
+section {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 2rem;
+}
+
+/* Button Styles */
+.delete-btn,
+.btn {
+   display: inline-block;
+   margin-top: 1rem;
+   padding: 1.3rem 3rem;
+   cursor: pointer;
+   font-size: 2rem;
+   text-transform: capitalize;
+}
+
+.delete-btn {
+   background-color: var(--red);
+   color: var(--white);
+}
+
+.btn {
+   background-color: darkgreen;
+   color: var(--black);
+}
+
+.delete-btn:hover,
+.btn:hover {
+   letter-spacing: 0.2rem;
+}
+
+/* Title Styles */
+.title {
+   text-align: center;
+   margin-bottom: 3rem;
+   font-size: 30px;
+   color: darkgreen;
+   text-transform: uppercase;
+   text-decoration: underline;
+   text-underline-offset: 1rem;
+}
+
+/* Heading Styles */
+.heading {
+   background-color: darkgreen;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-flow: column;
+   min-height: 75px;
+   border-radius: 100px;
+   margin-top: 10px;
+}
+/*about*/
+.heading h3 {
+   font-size: 4rem;
+   color: white;
+   text-transform: capitalize;
+ 
+}
+
+.heading p a {
+   font-size: 2rem;
+   color: darkgreen;
+}
+
+.heading p span {
+   font-size: 2rem;
+   color: var(--light-color);
+}
+
+.heading p a:hover {
+   color: var(--white);
+}
+
+/* Header Styles */
+.header {
+   background-color: rgba(255, 255, 255, 0.85);
+   position: sticky;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 1000;
+   border-bottom: 2px solid darkgreen;
+   /*background-color: white;*/
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add the shadow */
+}
+
+.header .flex {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;
+}
+
+
+/* Navigation Bar Styles */
+.header .flex .navbar a {
+   margin: 0 1rem;
+   font-size: 20px;
+   color: darkgreen;
+}
+
+/* Navigation Bar Hover Styles */
+.header .flex .navbar a:hover {
+   color: yellowgreen;
+}
+
+/* Header Icons Styles */
+.header .flex .icons > * {
+   font-size: 2.5rem;
+   color: darkgreen;
+   margin-left: 1.5rem;
+   cursor: pointer;
+}
+
+/* Header Icons Hover Styles */
+.header .flex .icons > *:hover {
+   color: yellowgreen;
+}
+
+/* Profile Dropdown Animation */
+@keyframes fadeIn {
+   0% {
+      transform: translateY(1rem);
+   }
+}
+
+/* Profile Dropdown Styles */
+.header .flex .profile {
+   width: 30rem;
+   position: absolute;
+   top: 120%;
+   right: 2rem;
+   background-color: var(--white);
+   border: var(--border);
+   padding: 1.5rem;
+   text-align: center;
+   display: none;
+   animation: fadeIn 0.2s linear;
+}
+
+/* Active Profile Dropdown */
+.header .flex .profile.active {
+   display: block;
+}
+
+/* Profile Name Styles */
+.header .flex .profile .name {
+   font-size: 1.7rem;
+   margin-bottom: 0.5rem;
+}
+
+/* Account Details Styles */
+.header .flex .profile .account {
+   font-size: 1.7rem;
+   color: var(--light-color);
+   margin-top: 1.5rem;
+}
+
+/* Account Link Styles */
+.header .flex .profile .account a {
+   color: var(--black);
+   text-decoration: underline;
+}
+
+/* Account Link Hover Styles */
+.header .flex .profile .account a:hover {
+   color: darkgreen;
+}
+
+/* Menu Button Styles */
+#menu-btn {
+   display: none;
+}
+
+/* Home Section Styles */
+.home .slide {
+   display: flex;
+   flex-wrap: wrap-reverse;
+   gap: 1.5rem;
+   align-items: center;
+   margin-bottom: 4rem;
+
+  
+}
+
+/* Home Content Styles */
+.home .slide .content {
+   flex: 1 1 40rem;
+   text-align: center;
+   
+}
+
+/* Home Image Styles */
+.home .slide .image {
+   flex: 1 1 40rem;
+}
+
+/* Home Image Content Styles */
+.home .slide .image img {
+   width: 100%;
+}
+
+/* Home Slide Content Styles */
+.home .slide .content span {
+   font-size: 25px;
+   color: var(--light-color);
+}
+
+/* Home Slide Heading Styles */
+.home .slide .content h3 {
+   font-size: 5rem;
+   text-transform: capitalize;
+   color: var(--black);
+   padding: 1rem 0;
+}
+
+/* Swiper Pagination Active Bullet Styles */
+.swiper-pagination-bullet-active {
+   background-color: green;
+   cursor: pointer;
+   
+}
+/* Styles for Category Boxes */
+
+/* Container for the category boxes */
+.category .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr)); /* Responsive grid columns */
+   gap: 1.5rem; /* Spacing between grid items */
+   align-items: flex-start; /* Align items at the start of the cross axis */
+   
+}
+
+/* Individual category box */
+.category .box-container .box {
+   border: var(--border); /* Border style */
+   padding: 2rem; /* Padding inside the box */
+   text-align: center; /* Center align content */
+   border-radius: 30px;
+   margin-bottom: 10rem;
+}
+
+/* Image within the category box */
+.category .box-container .box img {
+   width: 100%; /* Image width is 100% of the container */
+   height: 10rem; /* Fixed height for the image */
+   object-fit: contain; /* Maintain aspect ratio while fitting */
+}
+
+/* Heading within the category box */
+.category .box-container .box h3 {
+   margin-top: 2rem; /* Top margin for the heading */
+   font-size: 2rem; /* Font size for the heading */
+   color: var(--black); /* Text color */
+}
+
+/* Hover styles for the category box */
+.category .box-container .box:hover {
+   background-color: darkgreen; /* Background color on hover */
+}
+
+/* Hover styles for the image within the category box */
+/*.category .box-container .box:hover img {
+   filter: invert(); /* Invert colors of the image on hover */
+
+
+/*Hover styles for the heading within the category box */
+/*.category .box-container .box:hover h3 {*/
+   /*color: var(--black); /* Text color change on hover */
+
+/* Styles for Product Boxes */
+
+/* Container for product boxes */
+.products .box-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 33rem); /* Responsive grid columns */
+   gap: 4rem; /* Spacing between grid items */
+   align-items: flex-start; /* Align items at the start of the cross axis */
+   justify-content: center; /* Center align items along the main axis */
+  }
+
+/* Individual product box */
+.products .box-container .box {
+   position: relative;
+   border: var(--border); /* Border style */
+   padding: 2rem; /* Padding inside the box */
+   overflow: hidden; /* Hide overflowing content */
+  
+}
+
+/* Icons for viewing and adding to cart */
+.products .box-container .box .fa-eye,
+.products .box-container .box .fa-shopping-cart {
+   position: absolute;
+   top: 1rem;
+   display: block;
+   height: 4.5rem;
+   width: 4.5rem;
+   line-height: 4.3rem;
+   font-size: 2rem;
+   border: var(--border);
+   background-color: white;
+   cursor: pointer;
+   color: darkgreen;
+   text-align: center;
+}
+
+/* Position of the view icon */
+.products .box-container .box .fa-eye {
+   left: -10rem;
+}
+
+/* Position of the cart icon */
+.products .box-container .box .fa-shopping-cart {
+   right: -10rem;
+}
+
+/* Hover styles for icons */
+.products .box-container .box:hover .fa-eye {
+   left: 1rem;
+}
+
+.products .box-container .box:hover .fa-shopping-cart {
+   right: 1rem;
+}
+
+/* Hover styles for icon background and color */
+.products .box-container .box .fa-eye:hover,
+.products .box-container .box .fa-shopping-cart:hover {
+   background-color: darkgreen;
+   color: var(--white);
+}
+
+/* Image within the product box */
+.products .box-container .box img {
+   height: 25rem; /* Fixed height for the image */
+   width: 100%; /* Image width is 100% of the container */
+   object-fit: contain; /* Maintain aspect ratio while fitting */
+   margin-bottom: 1rem; /* Bottom margin for spacing */
+}
+
+/* Category text within the product box */
+.products .box-container .box .cat {
+   font-size: 1.7rem; /* Font size for category text */
+   color: var(--light-color); /* Text color */
+}
+
+/* Hover styles for category text */
+.products .box-container .box .cat:hover {
+   color: var(--yellow); /* Text color change on hover */
+}
+
+/* Product name within the product box */
+.products .box-container .box .name {
+   font-size: 2rem; /* Font size for product name */
+   margin: 1rem 0; /* Margin around the name */
+   color: var(--black); /* Text color */
+}
+
+/* Flex container for price, quantity, and edit icon */
+.products .box-container .box .flex {
+   display: flex; /* Flex container */
+   align-items: center; /* Align items vertically */
+   gap: 1rem; /* Spacing between items */
+}
+
+/* Price text within the flex container */
+.products .box-container .box .flex .price {
+   margin-right: auto; /* Push to the right */
+   font-size: 2.5rem; /* Font size for price */
+   color: var(--black); /* Text color */
+}
+
+/* Additional details for price */
+.products .box-container .box .flex .price span {
+   font-size: 1.8rem; /* Font size for additional price details */
+   color: var(--light-color); /* Text color */
+}
+
+/* Quantity input within the flex container */
+.products .box-container .box .flex .qty {
+   padding: 1rem; /* Padding for the quantity input */
+   font-size: 1.8rem; /* Font size for quantity input */
+   border: var(--border); /* Border style */
+   color: var(--black); /* Text color */
+   width: 7rem; /* Fixed width for the input */
+}
+
+/* Edit icon within the flex container */
+.products .box-container .box .flex .fa-edit {
+   width: 5rem; /* Fixed width for the icon */
+   background-color:yellow; /* Background color */
+   color: wheat; /* Text color */
+   cursor: pointer; /* Cursor style */
+   height: 4.5rem; /* Fixed height for the icon */
+   font-size: 2rem; /* Font size for the icon */
+   border: var(--border); /* Border style */
+}
+
+/* Hover styles for edit icon */
+.products .box-container .box .flex .fa-edit:hover {
+   background-color:black; /* Background color on hover */
+   color: var(--white); /* Text color change on hover */
+}
+
+/* Subtotal text within the product box */
+.products .box-container .box .sub-total {
+   margin-top: 1rem; /* Top margin for spacing */
+   font-size: 1.7rem; /* Font size for subtotal text */
+   color: var(--light-color); /* Text color */
+}
+
+/* Additional details for subtotal text */
+.products .box-container .box .sub-total span {
+   color: var(--black); /* Text color */
+}
+
+/* Delete icon for removing a product */
+.products .box-container .box .fa-times {
+   font-size: 2rem; /* Font size for the delete icon */
+   background-color: var(--red); /* Background color */
+   color: var(--white); /* Text color */
+   height: 4.5rem; /* Fixed height for the icon */
+   position: absolute; /* Positioned absolutely within the box */
+   top: 1rem; /* Position from the top */
+   right: 1rem; /* Position from the right */
+   width: 4.5rem; /* Fixed width for the icon */
+   line-height: 4.3rem; /* Line height for centering */
+   height: 4.5rem; /* Fixed height for the icon */
+   cursor: pointer; /* Cursor style */
+   border: var(--border); /* Border style */
+}
+
+/* Hover styles for delete icon */
+.products .box-container .box .fa-times:hover {
+   background-color: var(--black); /* Background color on hover */
+}
+
+/* "Load More" button */
+.products .more-btn {
+   margin-top: 2rem; /* Top margin for spacing */
+   text-align: center; /* Center align the button */
+}
+
+/* Cart total container */
+.products .cart-total {
+   border: var(--border); /* Border style */
+   padding: 1rem 2rem; /* Padding for the container */
+   margin-top: 1rem; /* Top margin for spacing */
+   margin-bottom: 2rem; /* Bottom margin for spacing */
+   display: flex; /* Flex container */
+   flex-wrap: wrap; /* Wrap items if they exceed width */
+   gap: 1.5rem; /* Spacing between items */
+   align-items: center; /* Align items vertically */
+}
+
+/* Text within the cart total container */
+.products .cart-total p {
+   margin-right: auto; /* Push to the right */
+   font-size: 2rem; /* Font size for the text */
+   color: var(--light-color); /* Text color */
+}
+
+/* Additional details for cart total text */
+.products .cart-total p span {
+   color: var(--black); /* Text color */
+}
+
+/* Button within the cart total container */
+.products .cart-total .btn {
+   margin-top: 0; /* Top margin for spacing */
+}
+.scroll-button-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space evenly between boxes */
+}
+
+.scroll-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #007bff; /* Border style */
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 5px; /* Add margin to create space between boxes */
+}
+
+.scroll-button {
+    background-color: transparent;
+    color: #9ACD32;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-left: 20px;
+}
+
+.scroll-button:hover {
+    color: white;
+}
+
+
+/**************************************************About us **********************************************/
+.about .row{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap:1.5rem;
+   margin-top: 20px;
+   margin-bottom: 50px;
+}
+
+.about .row .image{
+   flex:1 1 40rem;
+}
+
+.about .row .image img{
+   width: 100%;
+}
+
+.about .row .content{
+   flex:1 1 40rem;
+   text-align: center;
+
+}
+
+.about .row .content h3{
+   font-size: 3rem;
+   text-transform: capitalize;
+   color:var(--black);
+}
+
+.about .row .content p{
+   padding:1rem 0;
+   line-height: 2;
+   font-size: 1.6rem;
+   color:var(--light-color);
+}
+
+.steps .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:1.5rem;
+   align-items: flex-start;
+}
+
+.steps .box-container .box{
+   text-align: center;
+   padding:2rem;
+   border:var(--border);
+}
+
+.steps .box-container .box img{
+   height: 15rem;
+   margin-bottom: 1rem;
+   width: 100%;
+   object-fit: contain;
+}
+
+.steps .box-container .box h3{
+   font-size: 2rem;
+   color:var(--black);
+   margin:1rem 0;
+   text-transform: capitalize;
+}
+
+.steps .box-container .box p{
+   font-size: 1.6rem;
+   color:var(--light-color);
+   line-height: 2;
+}
+
+
+/*Team*/
+
+.team{
+   width: 100%;
+   height: 90vh;
+   background-image: url(image/bg1.jpg);
+   background-size: cover;
+   background-position: center;
+}
+
+.team h1{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 30px;
+   margin-bottom: 30px;
+   margin-top: 60px;
+}
+
+/*.team h1 span{
+   color: #fac031;
+   margin-left: 15px;
+   font-family: mv boli;
+}*/
+
+.team h1 span::after{
+   content: '';
+   width: 100%;
+   height: 2px;
+   background: #fac031;
+   display: block;
+   position: relative;
+   bottom: 15px;
+}
+
+.team .team_box{
+   width: 95%;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   top: 13%;
+}
+
+.team .team_box .profile{
+   width: 320px;
+   height: 320px;
+   border-radius: 50%;
+   margin: 0 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   box-shadow: 0 0 8px rgba(2, 87, 23, 0.5);
+   transition: 0.4s;
+}
+
+.team .team_box .profile:hover{
+   border-radius: 20px;
+   height: 320px;
+}
+
+.team .team_box .profile img{
+   width: 250px;
+   height: 250px;
+   object-fit: cover;
+   object-position: center;
+   border-radius: 50%;
+   cursor: pointer;
+   box-shadow: 0 0 8px rgba(51, 207, 71, 0.5);
+   z-index: 2;
+   transition: 0.4s;
+}
+
+.team .team_box .profile:hover img{
+   border-radius: 20px;
+   margin-top: -230px;
+}
+
+.team .team_box .profile .info{
+   position: absolute;
+   text-align: center;
+   top: 25%;
+   transition: 0.4s;
+}
+
+.team .team_box .profile:hover .info{
+   top: 60%;
+}
+
+.team .team_box .profile .info .name{
+   color: darkgreen;
+   margin-bottom: 15px;
+   font-size: 20px;
+}
+
+.team .team_box .profile .info .bio{
+   width: 70%;
+   text-align: center;
+   margin: 0 auto 10px auto;
+}
+
+.team .team_box .profile .info .team_icon i{
+   margin: 10px 5px 5px 0;
+   cursor: pointer;
+   transition: 0.3s;
+}
+
+.team .team_box .profile .info .team_icon i:hover{
+   color: darkgreen;
+}
+
+
+/*make responsive the team section*/
+@media (max-width: 768px) {
+   .team h1 {
+      font-size: 24px;
+   }
+
+   .team .team_box {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .team .team_box .profile {
+      max-width: none;
+      width: 80%;
+   }
+}
+
+
+
+
+
+/******************************************************search page**************************************************/
+
+.search-form form{
+   display: flex;
+   gap:1rem;
+   margin-top: 30px;
+}
+
+.search-form form input{
+   width: 80%;
+   padding:1.4rem;
+   font-size: 1.8rem;
+   border:var(--border);
+   color:var(--black);
+   border-radius: 100px;
+   margin-left: 40px;
+   justify-content: center; 
+   align-items: center; 
+}
+
+.search-form form button{
+   width: 6rem;
+   font-size: 2rem;
+   background-color: darkgreen;
+   color:var(--white);
+   cursor: pointer;
+}
+
+.search-form form button:hover{
+   background-color: yellowgreen;
+   color:var(--black);
+}
+
+/* media queries  */
+
+@media (max-width:991px) {
+   
+   html{
+      font-size: 55%;
+   }
+
+}
+
+@media (max-width:768px){
+
+   #menu-btn{
+      display: inline-block;
+   }
+
+   .header .flex .navbar{
+      position: absolute;
+      top:99%; left: 0; right: 0;
+      border-top: var(--border);
+      border-bottom: var(--border);
+      background-color: var(--white);
+      transition: .2s linear;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .flex .navbar a{
+      display: block;
+      margin:2rem;
+   }
+
+   .header .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+
+}
